@@ -1,0 +1,347 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2024-11-01T16:09:44.449977-05:00",
+            "magic": "668ca25d7f85ccc6ac87bbb638bb84f209eef6d0a451c1879fb6018ee75ce8ea",
+            "version": "v3.137.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "leeladhar",
+                "project": "pulumirancher",
+                "stack": "dev"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::pulumirancher::pulumi:pulumi:Stack::pulumirancher-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "created": "2024-11-01T20:43:00.241651Z",
+                "modified": "2024-11-01T20:43:00.241651Z",
+                "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#142"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulumirancher::pulumi:providers:aws::default_6_57_0",
+                "custom": true,
+                "id": "7508efd5-3e2e-46cf-b652-146a88a51577",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "__internal": {},
+                    "region": "us-east-1",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.57.0"
+                },
+                "outputs": {
+                    "region": "us-east-1",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.57.0"
+                },
+                "created": "2024-11-01T20:43:02.16202Z",
+                "modified": "2024-11-01T20:43:02.16202Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulumirancher::aws:ec2/keyPair:KeyPair::rke2-key",
+                "custom": true,
+                "id": "rke2-key-517c120",
+                "type": "aws:ec2/keyPair:KeyPair",
+                "inputs": {
+                    "__defaults": [
+                        "keyName"
+                    ],
+                    "keyName": "rke2-key-517c120",
+                    "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZAn1tS/h923pG5mdh0MCSt8dSBTnEvBMNpH1lh7aK3WxGmn3MW+5J9XSMWkzINnA0YCqZMN32sv9dbiEBLZeyES3GjY+ZAW2K6CssNXnthgqaa8VeTLDacENix85iAmmzdI8VS7i9AWgXwTa48oy3IWH+BSoZY6csW1VBrlPc6QgdqbE085JDWW/0v0d8ZApluqgwSAMYOwI6/6+qvv3UpCQsNxYy+sQwTVw9dJGXG5Hg0b6qG55qMMiF8Cs0aXOr9BmNoFbNc7wrfxta7NxaNUsFDmKfFhUEKYUljtizuDTtYY/g5Vg9DmZudCU6CReoRAsFDYyFPaH7etO7SZvT leeladharedala@leeladhars-MacBook-Pro.local"
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:us-east-1:975050070855:key-pair/rke2-key-517c120",
+                    "fingerprint": "3f:d6:c1:a5:cc:0e:f1:75:d0:cd:f4:c2:bc:81:9b:4c",
+                    "id": "rke2-key-517c120",
+                    "keyName": "rke2-key-517c120",
+                    "keyNamePrefix": "",
+                    "keyPairId": "key-0c1030ec058baec4b",
+                    "keyType": "rsa",
+                    "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZAn1tS/h923pG5mdh0MCSt8dSBTnEvBMNpH1lh7aK3WxGmn3MW+5J9XSMWkzINnA0YCqZMN32sv9dbiEBLZeyES3GjY+ZAW2K6CssNXnthgqaa8VeTLDacENix85iAmmzdI8VS7i9AWgXwTa48oy3IWH+BSoZY6csW1VBrlPc6QgdqbE085JDWW/0v0d8ZApluqgwSAMYOwI6/6+qvv3UpCQsNxYy+sQwTVw9dJGXG5Hg0b6qG55qMMiF8Cs0aXOr9BmNoFbNc7wrfxta7NxaNUsFDmKfFhUEKYUljtizuDTtYY/g5Vg9DmZudCU6CReoRAsFDYyFPaH7etO7SZvT leeladharedala@leeladhars-MacBook-Pro.local"
+                },
+                "parent": "urn:pulumi:dev::pulumirancher::pulumi:pulumi:Stack::pulumirancher-dev",
+                "provider": "urn:pulumi:dev::pulumirancher::pulumi:providers:aws::default_6_57_0::7508efd5-3e2e-46cf-b652-146a88a51577",
+                "propertyDependencies": {
+                    "publicKey": []
+                },
+                "created": "2024-11-01T20:43:03.584865Z",
+                "modified": "2024-11-01T20:43:03.584865Z",
+                "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi_aws/ec2/key_pair.py#341"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulumirancher::aws:ec2/securityGroup:SecurityGroup::rke2-security-group",
+                "custom": true,
+                "id": "sg-03639c1b317f1c9a6",
+                "type": "aws:ec2/securityGroup:SecurityGroup",
+                "inputs": {
+                    "__defaults": [
+                        "name",
+                        "revokeRulesOnDelete"
+                    ],
+                    "description": "Allow SSH and HTTPS",
+                    "ingress": [
+                        {
+                            "__defaults": [
+                                "self"
+                            ],
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "fromPort": 22,
+                            "protocol": "tcp",
+                            "self": false,
+                            "toPort": 22
+                        },
+                        {
+                            "__defaults": [
+                                "self"
+                            ],
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "fromPort": 443,
+                            "protocol": "tcp",
+                            "self": false,
+                            "toPort": 443
+                        }
+                    ],
+                    "name": "rke2-security-group-9697a5d",
+                    "revokeRulesOnDelete": false
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":900000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:us-east-1:975050070855:security-group/sg-03639c1b317f1c9a6",
+                    "description": "Allow SSH and HTTPS",
+                    "egress": [],
+                    "id": "sg-03639c1b317f1c9a6",
+                    "ingress": [
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "",
+                            "fromPort": 22,
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "tcp",
+                            "securityGroups": [],
+                            "self": false,
+                            "toPort": 22
+                        },
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "",
+                            "fromPort": 443,
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "tcp",
+                            "securityGroups": [],
+                            "self": false,
+                            "toPort": 443
+                        }
+                    ],
+                    "name": "rke2-security-group-9697a5d",
+                    "namePrefix": "",
+                    "ownerId": "975050070855",
+                    "revokeRulesOnDelete": false,
+                    "vpcId": "vpc-0e5ce6e25abac88d4"
+                },
+                "parent": "urn:pulumi:dev::pulumirancher::pulumi:pulumi:Stack::pulumirancher-dev",
+                "provider": "urn:pulumi:dev::pulumirancher::pulumi:providers:aws::default_6_57_0::7508efd5-3e2e-46cf-b652-146a88a51577",
+                "propertyDependencies": {
+                    "description": [],
+                    "ingress": []
+                },
+                "created": "2024-11-01T20:43:05.624667Z",
+                "modified": "2024-11-01T20:43:05.624667Z",
+                "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi_aws/ec2/security_group.py#732"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulumirancher::aws:ec2/instance:Instance::rke2-instance",
+                "custom": true,
+                "id": "i-06520ed1787137e94",
+                "type": "aws:ec2/instance:Instance",
+                "inputs": {
+                    "__defaults": [
+                        "getPasswordData",
+                        "sourceDestCheck",
+                        "userDataReplaceOnChange"
+                    ],
+                    "ami": "ami-06b21ccaeff8cd686",
+                    "getPasswordData": false,
+                    "instanceType": "t3.medium",
+                    "keyName": "rke2-key-517c120",
+                    "rootBlockDevice": {
+                        "__defaults": [
+                            "deleteOnTermination"
+                        ],
+                        "deleteOnTermination": true,
+                        "volumeSize": 30
+                    },
+                    "securityGroups": [
+                        "rke2-security-group-9697a5d"
+                    ],
+                    "sourceDestCheck": true,
+                    "tags": {
+                        "Name": "RKE2Server"
+                    },
+                    "tagsAll": {
+                        "Name": "RKE2Server"
+                    },
+                    "userDataReplaceOnChange": false
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000,\"read\":900000000000,\"update\":600000000000},\"schema_version\":\"1\"}",
+                    "ami": "ami-06b21ccaeff8cd686",
+                    "arn": "arn:aws:ec2:us-east-1:975050070855:instance/i-06520ed1787137e94",
+                    "associatePublicIpAddress": true,
+                    "availabilityZone": "us-east-1d",
+                    "capacityReservationSpecification": {
+                        "capacityReservationPreference": "open",
+                        "capacityReservationTarget": null
+                    },
+                    "cpuCoreCount": 1,
+                    "cpuOptions": {
+                        "amdSevSnp": "",
+                        "coreCount": 1,
+                        "threadsPerCore": 2
+                    },
+                    "cpuThreadsPerCore": 2,
+                    "creditSpecification": {
+                        "cpuCredits": "unlimited"
+                    },
+                    "disableApiStop": false,
+                    "disableApiTermination": false,
+                    "ebsBlockDevices": [],
+                    "ebsOptimized": false,
+                    "enclaveOptions": {
+                        "enabled": false
+                    },
+                    "ephemeralBlockDevices": [],
+                    "getPasswordData": false,
+                    "hibernation": false,
+                    "hostId": "",
+                    "hostResourceGroupArn": null,
+                    "iamInstanceProfile": "",
+                    "id": "i-06520ed1787137e94",
+                    "instanceInitiatedShutdownBehavior": "stop",
+                    "instanceLifecycle": "",
+                    "instanceMarketOptions": null,
+                    "instanceState": "running",
+                    "instanceType": "t3.medium",
+                    "ipv6AddressCount": 0,
+                    "ipv6Addresses": [],
+                    "keyName": "rke2-key-517c120",
+                    "launchTemplate": null,
+                    "maintenanceOptions": {
+                        "autoRecovery": "default"
+                    },
+                    "metadataOptions": {
+                        "httpEndpoint": "enabled",
+                        "httpProtocolIpv6": "disabled",
+                        "httpPutResponseHopLimit": 2,
+                        "httpTokens": "required",
+                        "instanceMetadataTags": "disabled"
+                    },
+                    "monitoring": false,
+                    "networkInterfaces": [],
+                    "outpostArn": "",
+                    "passwordData": "",
+                    "placementGroup": "",
+                    "placementPartitionNumber": 0,
+                    "primaryNetworkInterfaceId": "eni-0023a8d95200bf5a7",
+                    "privateDns": "ip-172-31-45-172.ec2.internal",
+                    "privateDnsNameOptions": {
+                        "enableResourceNameDnsARecord": false,
+                        "enableResourceNameDnsAaaaRecord": false,
+                        "hostnameType": "ip-name"
+                    },
+                    "privateIp": "172.31.45.172",
+                    "publicDns": "ec2-3-81-23-206.compute-1.amazonaws.com",
+                    "publicIp": "3.81.23.206",
+                    "rootBlockDevice": {
+                        "deleteOnTermination": true,
+                        "deviceName": "/dev/xvda",
+                        "encrypted": false,
+                        "iops": 3000,
+                        "kmsKeyId": "",
+                        "tags": {},
+                        "tagsAll": {},
+                        "throughput": 125,
+                        "volumeId": "vol-00ac08ecdf97bd621",
+                        "volumeSize": 30,
+                        "volumeType": "gp3"
+                    },
+                    "secondaryPrivateIps": [],
+                    "securityGroups": [
+                        "rke2-security-group-9697a5d"
+                    ],
+                    "sourceDestCheck": true,
+                    "spotInstanceRequestId": "",
+                    "subnetId": "subnet-0a40c3540e0fd4fd6",
+                    "tags": {
+                        "Name": "RKE2Server"
+                    },
+                    "tagsAll": {
+                        "Name": "RKE2Server"
+                    },
+                    "tenancy": "default",
+                    "userData": null,
+                    "userDataBase64": null,
+                    "userDataReplaceOnChange": false,
+                    "volumeTags": null,
+                    "vpcSecurityGroupIds": [
+                        "sg-03639c1b317f1c9a6"
+                    ]
+                },
+                "parent": "urn:pulumi:dev::pulumirancher::pulumi:pulumi:Stack::pulumirancher-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::pulumirancher::aws:ec2/securityGroup:SecurityGroup::rke2-security-group",
+                    "urn:pulumi:dev::pulumirancher::aws:ec2/keyPair:KeyPair::rke2-key"
+                ],
+                "provider": "urn:pulumi:dev::pulumirancher::pulumi:providers:aws::default_6_57_0::7508efd5-3e2e-46cf-b652-146a88a51577",
+                "propertyDependencies": {
+                    "ami": [],
+                    "instanceType": [],
+                    "keyName": [
+                        "urn:pulumi:dev::pulumirancher::aws:ec2/keyPair:KeyPair::rke2-key"
+                    ],
+                    "rootBlockDevice": [],
+                    "securityGroups": [
+                        "urn:pulumi:dev::pulumirancher::aws:ec2/securityGroup:SecurityGroup::rke2-security-group"
+                    ],
+                    "tags": []
+                },
+                "created": "2024-11-01T20:43:19.990188Z",
+                "modified": "2024-11-01T21:08:54.674282Z",
+                "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi_aws/ec2/instance.py#2207"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulumirancher::pulumi:providers:command::default_1_0_1",
+                "custom": true,
+                "id": "f30cade2-cee8-4591-a879-b766c7b76245",
+                "type": "pulumi:providers:command",
+                "inputs": {
+                    "__internal": {},
+                    "version": "1.0.1"
+                },
+                "outputs": {
+                    "version": "1.0.1"
+                },
+                "created": "2024-11-01T20:43:20.551641Z",
+                "modified": "2024-11-01T20:43:20.551641Z"
+            }
+        ]
+    }
+}
